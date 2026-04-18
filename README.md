@@ -66,3 +66,8 @@ Bu proje **Cem Emir** tarafından hazırlanmıştır. Kodlar özgürce geliştir
 
 ---
 **GitHub:** [cememir/2026-minecraft-java-python](https://github.com/cememir/2026-minecraft-java-python)
+
+
+---
+# short_summary:
+Bu Cem Emir için bir ses kaydıdır. 2026 4. ayın 18'inde Minecraft'ı yeniden güncelledik. Java Connector ile Python kodlarını direkt oyuncuların görebileceği şekilde yaptık. Ayrıca içlerine fiziksel olaylar da kattık ki kodun gerçek hayatta fiziksel olarak ve ücretsiz ve risksiz, güvenilir bir ortamda nasıl yapılacağını algılaması için kodumuzu düzenledik. Yarıçap hesabı, halkalar, racian hesaplarını görmüş oldu.
