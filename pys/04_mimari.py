@@ -36,15 +36,19 @@ def kale():
             return HAVA
         return COBBLE
 
-    # Sur duvarları
-    for x in range(EN):
-        for y in range(SUR_Y):
-            mc.setBlock(ox + x, oy + y, oz,       sur_bloğu(x, y, 0))
-            mc.setBlock(ox + x, oy + y, oz + BOY, sur_bloğu(x, y, BOY))
-    for z in range(BOY + 1):
-        for y in range(SUR_Y):
-            mc.setBlock(ox,        oy + y, oz + z, sur_bloğu(0, y, z))
-            mc.setBlock(ox + EN,   oy + y, oz + z, sur_bloğu(EN, y, z))
+    # Sur duvarları (setBlocks ile optimize edildi)
+    mc.setBlocks(ox, oy, oz, ox + EN, oy + SUR_Y - 1, oz, COBBLE)           # Ön duvar
+    mc.setBlocks(ox, oy, oz + BOY, ox + EN, oy + SUR_Y - 1, oz + BOY, COBBLE) # Arka duvar
+    mc.setBlocks(ox, oy, oz, ox, oy + SUR_Y - 1, oz + BOY, COBBLE)           # Sol duvar
+    mc.setBlocks(ox + EN, oy, oz, ox + EN, oy + SUR_Y - 1, oz + BOY, COBBLE) # Sağ duvar
+
+    # Mazgal (mazgal kısımlarında hava boşlukları)
+    for x in range(0, EN + 1, 2):
+        mc.setBlock(ox + x, oy + SUR_Y - 1, oz, HAVA)
+        mc.setBlock(ox + x, oy + SUR_Y - 1, oz + BOY, HAVA)
+    for z in range(0, BOY + 1, 2):
+        mc.setBlock(ox, oy + SUR_Y - 1, oz + z, HAVA)
+        mc.setBlock(ox + EN, oy + SUR_Y - 1, oz + z, HAVA)
 
     # Köşe kuleler (daha yüksek)
     for (kx, kz) in [(ox, oz), (ox+EN, oz), (ox, oz+BOY), (ox+EN, oz+BOY)]:
@@ -74,9 +78,7 @@ def kale():
     mc.setBlock(kapı_x, oy + 5, oz, COBBLE)
 
     # İç zemin
-    for x in range(1, EN):
-        for z in range(1, BOY):
-            mc.setBlock(ox + x, oy - 1, oz + z, TAŞ)
+    mc.setBlocks(ox + 1, oy - 1, oz + 1, ox + EN - 1, oy - 1, oz + BOY - 1, TAŞ)
 
     # Şato binası (iç yapı)
     for x in range(8, 22):
@@ -105,15 +107,11 @@ def roma_tapinagi():
 
     # Merdivenler (3 basamak)
     for basamak in range(3):
-        for x in range(-basamak, EN + basamak + 1):
-            for z in range(-basamak, BOY + basamak + 1):
-                mc.setBlock(ox + x, oy + basamak - 1, oz + z,
-                            SANDSTONE)
+        mc.setBlocks(ox - basamak, oy + basamak - 1, oz - basamak, 
+                     ox + EN + basamak, oy + basamak - 1, oz + BOY + basamak, SANDSTONE)
 
     # Zemin platform
-    for x in range(EN + 1):
-        for z in range(BOY + 1):
-            mc.setBlock(ox + x, oy + 2, oz + z, SANDSTONE)
+    mc.setBlocks(ox, oy + 2, oz, ox + EN, oy + 2, oz + BOY, SANDSTONE)
 
     # Sütunlar (ön ve arka sıra)
     sutun_aralik = 4
