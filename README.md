@@ -17,42 +17,45 @@ Kod yazmanın sadece metinlerden ibaret olmadığını, fiziksel (veya dijital) 
 
 ## 📂 Proje İçeriği ve Modüller
 
-Proje, 10 ana eğitim scriptinden oluşur:
+Proje, ana eğitim scriptleri ve gelişmiş AI araçlarından oluşur:
 
-1.  **📐 01_Matematik Grafiği:** Sinüs, Kosinüs, Parabol ve Fibonacci sarmallarını bloklarla çizer.
-2.  **☀️ 02_Güneş Sistemi:** Gezegen yörüngelerini ve gök cisimlerini simüle eder.
-3.  **🎨 03_Renk Lab:** RGB değerlerini Minecraft yün renklerine dönüştüren renk deneyleri.
-4.  **🏛️ 04_Mimari:** Klasik ve modern yapıların (Kale, Roma Tapınağı, Pagoda, Köprü) algoritmik inşası.
-5.  **⚽ 05_Fizik Simülasyonu:** Yerçekimi, çarpışma ve momentum deneyleri.
-6.  **🌪️ 06_Doğa Olayları:** Volkanik patlamalar, fırtınalar ve bitki büyüme simülasyonları.
-7.  **🧩 07_Algoritma:** Maze (labirent) oluşturma ve yol bulma algoritmaları.
-8.  **🎮 08_Mini Oyunlar:** Minecraft içinde çalışan basit Python tabanlı oyunlar.
-9.  **🗺️ 09_Coğrafya:** Topografi oluşturma ve biyom manipülasyonu.
-10. **✨ 10_Özel Efektler:** Parçacık sistemleri ve karmaşık görsel şölenler.
+1.  **🤖 11_AI Builder:** Sesli veya yazılı komutlarla çalışan, malzeme duyarlı Text-to-Build sistemi.
+2.  **📐 01_Matematik Grafiği:** Sinüs, Kosinüs, Parabol ve Fibonacci sarmallarını bloklarla çizer.
+3.  **🏛️ 04_Mimari:** Klasik ve modern yapıların (Kale, Roma Tapınağı, Pagoda, Köprü) algoritmik inşası.
+4.  **☀️ 02_Güneş Sistemi:** Gezegen yörüngelerini simüle eder.
+5.  **🧩 07_Algoritma:** Maze (labirent) oluşturma ve yol bulma algoritmaları.
+6.  **🎮 08_Mini Oyunlar:** Minecraft içinde çalışan Python tabanlı oyunlar.
+
+---
+
+## 🤖 AI Builder Özellikleri
+- **3D Parametre Kontrolü:** `[En] [Boy] [Yükseklik]` şeklinde milimetrik kontrol.
+- **Malzeme Duyarlılığı:** `obsidyen, elmas, altın, cam, tuğla` gibi 8+ farklı materyal desteği.
+- **Akıllı Temizleme:** Tek komutla (`temizle`) alanı saniyeler içinde sıfırlama.
+- **Robust Karakter Desteği:** Windows Terminali ve Minecraft chat arasındaki Türkçe karakter uyuşmazlığı giderildi.
 
 ---
 
 ## 🚀 Başlangıç Rehberi
 
 ### 1. Sunucuyu Başlat
-`start.bat` dosyasını çalıştırarak Minecraft sunucusunu ayağa kaldırın. Portun `4711` olduğundan emin olun.
+`start.bat` dosyasını çalıştırın. Dünya otomatik olarak **Flat World (Düz Dünya)** modunda başlayacaktır.
 
 ### 2. Minecraft'a Bağlan
 Oyuna giriş yapın ve `localhost` adresine bağlanın.
 
-### 3. Kodları Çalıştır
-Bir terminal açın ve istediğiniz modülü çalıştırın:
+### 3. AI Builder'ı Başlat
+Bir terminal açın ve doğrudan çalıştırın (Parametre gerekmez, UTF-8 desteği içindedir):
 ```powershell
-# Örnek: Matematik grafiğini başlat
-$env:PYTHONIOENCODING='utf-8'; python pys/01_matematik_grafigi.py
+python pys/11_ai_builder.py
 ```
 
 ---
 
-## 💡 Gelecek Geliştirmeler (TODO)
-- [ ] `mc.setBlocks` optimizasyonu ile büyük yapıları milisaniyeler içinde inşa etmek.
-- [ ] Yapay zeka (LLM) entegrasyonu ile metinden yapı (text-to-build) sistemini kurmak.
-- [ ] Bir "Düz Dünya" (Flat World) üzerinde tüm bu yapıları devasa bir şehre dönüştürmek.
+## ✅ Tamamlanan Hedefler
+- [x] `mc.setBlocks` optimizasyonu ile büyük yapıları milisaniyeler içinde inşa etmek.
+- [x] Yapay zeka entegrasyonu ile metinden yapı (text-to-build) sistemini kurmak.
+- [x] "Düz Dünya" (Flat World) üzerinde devasa bir şehir yerleşimi planlamak.
 
 ---
 
