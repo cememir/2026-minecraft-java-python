@@ -250,7 +250,7 @@ def matris_yagmuru(sure=15):
 
 def işık_halkası(sure=15):
     """Oyuncunun etrafında dönen ışık halkaları."""
-    mesaj(mc, "§e✨ Işık Halkası!")
+    mesaj(mc, "§e✨ Işık Halkasııııııııııııııı!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
     onceki = []
     t = 0
     bitis = time.time() + sure
@@ -267,7 +267,7 @@ def işık_halkası(sure=15):
 
             # 3 halka farklı düzlemlerde
             for halka_no in range(3):
-                r       = 5 + halka_no * 2
+                r       = 15 + halka_no * 2
                 y_ofset = halka_no * 3
                 aci_ofset = t + halka_no * math.pi / 3
 
@@ -288,7 +288,7 @@ def işık_halkası(sure=15):
                         y = py + 4 + int(r * math.sin(aci))
                         z = pz + int(r * math.cos(aci))
 
-                    mc.setBlock(x, y, z, YÜN, renk)
+                    mc.setBlock(x, y, z, PARLAYAN, renk)
                     onceki.append((x, y, z))
 
             t += 0.2
