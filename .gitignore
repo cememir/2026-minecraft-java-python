@@ -1,0 +1,24 @@
+# Minecraft Server Files
+*.jar
+cache/
+logs/
+world/
+world_nether/
+world_the_end/
+emir/
+emir_nether/
+emir_the_end/
+usercache.json
+version_history.json
+banned-ips.json
+banned-players.json
+whitelist.json
+ops.json
+libraries/
+versions/
+installs/
+
+# Python
+__pycache__/
+*.pyc
+.env
